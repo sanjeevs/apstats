@@ -98,7 +98,6 @@ end
 def create_options
   options = {num_samples: 5, num_trials: 1000000, result_file: nil}
   
-  ARGV << '-h' if ARGV.empty?
   parser = OptionParser.new do |opts|
     opts.banner = <<EOF
 In a deck of cards, take a sample of say 'n' cards.
