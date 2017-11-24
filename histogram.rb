@@ -28,5 +28,11 @@ class Histogram
     end
   end
 
+  def clear
+    @hash.clear
+    @sorted_arr = []
+    @is_sorted = false
+  end
+
 end
     
