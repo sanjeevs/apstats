@@ -16,6 +16,16 @@ module Stats
     Math.sqrt(variance)
   end
 
+  def median
+    sorted_arr = self.sort
+    if (size % 2) == 1
+      sorted_arr.send(:[], size/2)
+    else
+      idx = size/2
+      (sorted_arr.send(:[], idx-1) + sorted_arr.send(:[], idx))/2.0 
+    end
+  end
+
 end
 Array.send :include, Stats
 
